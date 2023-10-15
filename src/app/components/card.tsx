@@ -2,10 +2,7 @@ import React, {FC, FunctionComponent, useState} from 'react';
 import Image from "next/image";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
-interface PopUpFunctionType {
-    (title: string, image: string, description: string, techno: string): void;
-}
+import {PopUpFunctionType} from "../types/type";
 
 interface CardProps {
     image: string;

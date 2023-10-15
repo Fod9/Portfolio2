@@ -6,18 +6,8 @@ import Expertise from "./components/expertise";
 import Skills from "./components/skills";
 import Projects from "./components/projects";
 import PopUp from "./components/PopUp";
+import {PopUpFunctionType, PopUpProps} from "./types/type";
 
-interface PopUpFunctionType {
-    (title: string, image: string, description: string, techno: string): void;
-}
-
-
-interface PopUpProps {
-    image: string;
-    title: string;
-    description: string;
-    techno: string;
-}
 export default function Home() {
     const [page, setPage] = useState(0)
     const [popUp, setPopUp] = useState(false)
@@ -29,7 +19,12 @@ export default function Home() {
             setPopUpProps(undefined)
             setPopUp(false)
         }else {
-            setPopUpProps({title: title, image: image, description: description, techno: techno})
+            setPopUpProps({
+                title: title || '',
+                image: image || '',
+                description: description || '',
+                techno: techno || ''
+            } as PopUpProps)
             setPopUp(true)
         }
 
@@ -44,7 +39,7 @@ export default function Home() {
             <main>
                 <>
                 {popUp ? <div className={"overlay"}></div> : null}
-                    {popUp && popUpProps ? <PopUp image={popUpProps["image"]} title={popUpProps["title"]} description={popUpProps["description"]} techno={popUpProps["techno"]} PopUpFunc={PopUpFunction} />
+                    {popUp && popUpProps ? <PopUp image={popUpProps.image} title={popUpProps.title} description={popUpProps.description} techno={popUpProps.techno} PopUpFunction={PopUpFunction} />
  : null}
                 </>
                 <div className={"short-desc"}>

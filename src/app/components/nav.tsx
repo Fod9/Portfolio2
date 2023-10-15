@@ -10,7 +10,7 @@ function CustomNav() {
   return (
     <>
       {[false, 'sm',].map((expand) => (
-        <Navbar key={expand} expand={expand}>
+        <Navbar key={String(expand)} expand={expand}>
           <Container fluid>
             <Navbar.Brand href="#">Tom <br/> Dernoncourt</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />

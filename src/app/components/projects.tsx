@@ -1,10 +1,6 @@
 import React, {FC} from 'react';
 import CustomCard from "./card";
-
-interface PopUpFunctionType {
-    (title: string, image: string, description: string, techno: string): void;
-}
-
+import {PopUpFunctionType} from "../types/type";
 interface ProjectsProps {
     PopUpFunc: PopUpFunctionType;
 }

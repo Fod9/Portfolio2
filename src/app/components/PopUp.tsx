@@ -1,21 +1,10 @@
 import React, {FC} from 'react';
+import {PopUpProps} from "../types/type";
 
-interface PopUpFunctionType {
-    (title: string | undefined, image: string | undefined, description: string | undefined, techno: string | undefined): void;
-}
-
-interface PopUpProps {
-    image: string;
-    title: string;
-    description: string;
-    techno: string;
-    PopUpFunc: PopUpFunctionType;
-}
-
-const PopUp: FC<PopUpProps> = ({image, title, description, techno, PopUpFunc}) => {
+const PopUp: FC<PopUpProps> = ({image, title, description, techno, PopUpFunction}) => {
     return (
         <div className={"PopUp"}>
-            <button onClick={() => PopUpFunc(undefined, undefined, undefined, undefined)}>
+            <button onClick={() => PopUpFunction(undefined, undefined, undefined, undefined)}>
                 <img src="/img/Close.svg" alt=""/>
             </button>
             <h2>{title}</h2>
@@ -27,16 +16,16 @@ const PopUp: FC<PopUpProps> = ({image, title, description, techno, PopUpFunc}) =
                 <div className={"techno"}>
                     <p>{techno}</p>
                     <div className={"flex"}>
-                        {techno.split(" / ").map((techno, index) => {
+                        {techno ? techno.split(" / ").map((techno, index) => {
                             return (<img
                                 src={`/img/${techno}.svg`}
                                 alt={techno}
                                 key={index}
                                 onError={(e) => {
-                                    e.target.style.display = 'none'
+                                    (e.target as HTMLElement).style.display = 'none'
                                 }}
                             />)
-                        })}
+                        }): null}
                     </div>
                 </div>
             </div>
