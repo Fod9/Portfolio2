@@ -22,7 +22,7 @@ const Projects: FC<ProjectsProps> = ({PopUpFunc}) => {
                 </div>
                 <div className={"col-sm-8 col-md-6 col-xl-4"}>
                     <CustomCard image={"AI-Emotion.png"} title={"Detect emotion of a sentence"} description={"Deep learning model who can detect an emotion in a sentence"} techno={"Tensorflow"} PopUpFunction={PopUpFunc}/>
-                    <CustomCard image={"Lagrange.png"} title={"Location Gîte"} description={"Site de location de gite"} techno={"VueJS / NodeJS"} PopUpFunction={PopUpFunc}/>
+                    <CustomCard image={"LaGrange.png"} title={"Location Gîte"} description={"Site de location de gite"} techno={"VueJS / NodeJS"} PopUpFunction={PopUpFunc}/>
                 </div>
             </div>
         </div>
