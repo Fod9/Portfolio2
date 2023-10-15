@@ -54,8 +54,8 @@ export default function Home() {
                 <div id={"Contact"}>
                     <div className={"flex"}>
                         <h2>Contact</h2>
-                        <p>Dernoncourt.tom@gmail.com</p>
-                        <p>0629102842</p>
+                        <p>tom.dernoncourt@ecoles-epsi.fr</p>
+                        <p>06XXXXXXXX</p>
                     </div>
                 </div>
             </main>

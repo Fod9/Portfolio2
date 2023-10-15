@@ -121,6 +121,7 @@ body {
       aspect-ratio: 16/9;
       height: auto;
       background-image: url("/img/main.remini-enhanced.jpg");
+      max-width: 100vw;
       background-repeat: no-repeat;
       background-size: cover;
 
@@ -143,7 +144,7 @@ body {
 
         h2 {
           font-size: 1.2rem;
-          width: 100vw !important;
+          width: 90vw !important;
           font-weight: bold;
           text-transform: uppercase;
           color: white;
